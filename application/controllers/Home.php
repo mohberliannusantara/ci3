@@ -8,7 +8,9 @@
 
     public function index()
     {
-      $this->load->view('home');
+      $this->load->view('biodata');
+      $data['biodata_array'] = $this->biodata->getBiodataQueryArray();
+      $data[]
     }
   }
 

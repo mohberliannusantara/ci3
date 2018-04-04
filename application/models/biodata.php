@@ -11,9 +11,16 @@
       parent::__construct();
     }
 
-    public function FunctionName($value='')
+    public function getBiodataQueryArray()
     {
+      $query =  $this->db->query("SELECT * FROM biodata");
+      return $query->result_array();
+    }
 
+    public function getBiodataQueryObject()
+    {
+      $query =  $this->db->query("SELECT * FROM biodata");
+      return $query->result();
     }
   }
 
