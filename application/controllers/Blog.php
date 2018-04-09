@@ -10,7 +10,7 @@ class Blog extends CI_Controller {
   }
 
   public function add_view() {
-    $this->load->view('blog_add_view'); 
+    $this->load->view('blog_add_view');
   }
 
   public function add_action() {
@@ -22,8 +22,8 @@ class Blog extends CI_Controller {
       'content' => $this->input->post('content'),
       'image_file' => $this->input->post('image_file')
     );
-
     $this->Blog_model->insert($data);
+    redirect("index.php/Blog");
   }
 
   public function byId($id){

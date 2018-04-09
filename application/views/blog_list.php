@@ -22,10 +22,16 @@
           <li class="nav-item">
             <a class="nav-link disabled" href="#">Disabled</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url("index.php/Blog") ?>">Blog</a>
+          </li>
         </ul>
       </div>
     </nav>
     <main role="main" class="container">
+      <a href="<?php echo base_url("index.php/Blog/add_view") ?>" class="btn btn-primary">Tambah Blog</a>
+      <br>
+      <br>
       <ul class="list-unstyled">
       <?php foreach ($records as $key => $value): ?>
         <li class="media">
@@ -35,7 +41,7 @@
             <h5 class="mt-0 mb-1"><?php echo $value['title'] ?></h5>
             <?php echo $value['content'] ?>
             <br>
-              <a href="<?php echo base_url('index.php/Blog/byId/'.$value['id']) ?>">View Details</a> 
+              <a href="<?php echo base_url('index.php/Blog/byId/'.$value['id']) ?>">View Details</a>
           </div>
       </li>
       <?php endforeach ?>
