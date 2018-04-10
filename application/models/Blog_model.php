@@ -26,9 +26,8 @@ class Blog_model extends CI_Model {
     $this->db->where("id", $old_id);
     $this->db->update("blog", $data);
   }
-  
-  public function getOne($id)
-  {
+
+  public function getOne($id) {
     $query = $this->db->query("select * from blog where id='$id'");
     return $query->result_array();
   }

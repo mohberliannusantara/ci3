@@ -17,10 +17,16 @@
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url("index.php/Blog") ?>">Blog</a>
           </li>
         </ul>
       </div>
@@ -29,8 +35,16 @@
       <div class="row">
         <div class="col">
           <h1><?php echo $records[0]['title'] ?></h1>
-          <p><?php echo $records[0]['content'] ?></p>
+          <h6 lass="text-muted">Tanggal : <?php echo  $records[0]['date'] ?></h6>
         </div>
+      </div>
+      <div class="row">
+          <div class="col-2"> </div>
+          <div class="col-8">
+            <img src="<?php echo base_url() ?>uploads/<?php echo $records[0]['image_file']  ?>" alt="" class="">
+          </div>
+          <div class="col-2"> </div>
+          <p><?php echo $records[0]['content'] ?></p>
       </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
