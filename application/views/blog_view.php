@@ -7,7 +7,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
-      <a class="navbar-brand" href="#">Top navbar</a>
+      <a class="navbar-brand" href="#">Lian_N</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -39,12 +39,12 @@
         </div>
       </div>
       <div class="row">
-          <div class="col-2"> </div>
-          <div class="col-8">
-            <img src="<?php echo base_url() ?>uploads/<?php echo $records[0]['image_file']  ?>" alt="" class="">
-          </div>
-          <div class="col-2"> </div>
-          <p><?php echo $records[0]['content'] ?></p>
+        <div class="col-2"> </div>
+        <div class="col-8">
+          <img src="<?php echo base_url() ?>uploads/<?php echo $records[0]['image_file']  ?>" alt="" class="">
+        </div>
+        <div class="col-2"> </div>
+        <p><?php echo $records[0]['content'] ?></p>
       </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
