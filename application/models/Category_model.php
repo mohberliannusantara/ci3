@@ -9,15 +9,6 @@ class Category_model extends CI_Model
         parent::__construct();
     }
 
-    public function get_all_categories()
-    {
-        // Urutkan berdasar abjad
-        $this->db->order_by('cat_name');
-
-        $query = $this->db->get('categories');
-        return $query->result();
-    }
-
     public function create_category()
     {
         $data = array(
@@ -27,13 +18,4 @@ class Category_model extends CI_Model
 
         return $this->db->insert('categories', $data);
     }
-
-    // Dapatkan kategori berdasar ID
-    public function get_category_by_id($id)
-    {
-        $query = $this->db->get_where('categories', array('cat_id' => $id));
-        return $query->row();
-    }
-
-
 }

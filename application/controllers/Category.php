@@ -11,7 +11,7 @@ class Category extends CI_Controller
   {
     parent::__construct();
 
-    // Load semua model yang dipakai
+    // meload semua model yang dipakai
 		$this->load->model('blog_model');
 		$this->load->model('category_model');
   }
@@ -21,7 +21,7 @@ class Category extends CI_Controller
 		// Judul Halaman
 		$data['page_title'] = 'List Kategori';
 
-		// Dapatkan semua kategori
+		// mendapatkan semua kategori
 		$data['categories'] = $this->category_model->get_all_categories();
 
 		$this->load->view('categories/cat_view', $data);
