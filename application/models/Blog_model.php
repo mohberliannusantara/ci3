@@ -3,13 +3,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Blog_model extends CI_Model {
 
+  function __construct()
+  {
+    parent::__construct();
+  }
+
   public function getAll()
   {
+    // contoh Query Manual
+    // $query = $this->db->query('
+    // 		SELECT * FROM blogs
+    // 	');
+
+    // Memakai Query Builder untuk mengambil data dari table
     $query = $this->db->get("blog");
+
+    //return dalam bentuk object
     return $query->result_array();
   }
 
-  public function insert($data) {
+  public function insert($data)
+  {
     if ($this->db->insert("blog", $data)) {
       return true;
     }

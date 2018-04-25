@@ -3,13 +3,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Blog extends CI_Controller {
 
-  public function index() {
+  public function index()
+  {
+    //load model => blog
+    $this->load->model('blog_model');
 
+    //Mendapatkan data dari model blog
     $data['records'] = $this->Blog_model->getAll();
+
+    //passing data ke view
     $this->load->view('blog_list',$data);
+
   }
 
-  public function add_view() {
+  public function add_view()
+  {
     $data['error'] = "";
     $this->load->helper(array('form', 'url'));
     $this->load->library('form_validation');
@@ -49,7 +57,8 @@ class Blog extends CI_Controller {
     }
   }
 
-  public function add_action() {
+  public function add_action()
+  {
     $config['upload_path']   = './uploads/';
     $config['allowed_types'] = 'gif|jpg|png';
     $config['max_size']      = 80000;
